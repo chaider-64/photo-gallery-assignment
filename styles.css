@@ -46,15 +46,359 @@ table {
     border-spacing: 0;
 }
 /* ----------------END OF CSS RESET---------------- */
-:root{
-    --green: var(#007d7b);
-    --black: var(#000000);
-    --white: var(#ffffff);
+:root {
+    --green: #007d7b;
+    --black: #000000;
+    --white: #ffffff;
+    font-family: Arial, Helvetica, sans-serif
+}
+html {
+    background-color: var(--black);
     font-family: Arial, Helvetica, sans-serif;
 }
-
-p {font-size: 1.25em;}
-figcaption, label, input, small {font-size: 1em;}
-nav a {font-size: 1.5em;}
-h1 {font-size: 3em;}
-h2 {font-size: 2em;}
+body {
+    width: 485px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+h1 {
+    font-size: 3em;
+    color: var(--green);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: .25em;
+}
+nav {
+    position: relative;
+    align-items: center;
+}
+ul {
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-transform: uppercase;
+    justify-items: center;
+    padding: 3em 1.5em;
+    margin-left: -10px;
+    font-weight: bold;
+}
+nav a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--white);
+}
+a:hover{
+    display: block;
+    background-color: var(--green);
+}
+a:focus{
+    display: block;
+    background-color: var(--white);
+    color: var(--black);
+}
+[href="#top"] {
+    background-color: var(--black);
+    color: var(--white);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    outline: solid;
+    outline-width: 3px;
+    padding: .4em;
+    z-index: 2;
+}
+[href="#top"]:hover {
+    background-color: var(--green);
+}
+[href="#top"]:focus {
+    background-color: var(--white);
+    color: var(--black);
+}
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: .75em;
+}
+p {
+    font-size: 1.25em;
+    margin: .75em .5em .75em .5em;
+    line-height: 1.25;
+}
+img {
+    margin: .5em 2em;
+}
+#chile {
+    color: var(--white);
+    top: -2.5em;
+}
+#guatemala {
+    color: var(--white);
+    top: -17em;
+}
+#hawaii {
+    color: var(--white);
+    bottom: 3em;
+}
+#iran {
+    bottom: 39em;
+}
+#ireland {
+    bottom: 38em;
+}
+#italy {
+    bottom: 2.5em;
+}
+#moab-desert {
+    color: var(--white);
+    bottom: 2.75em;
+}
+#rocky-mountains {
+    bottom: 17.9em;
+}
+#switzerland {
+    bottom: 17.5em;
+}
+#uk {
+    bottom: 17.5em;
+}
+#usa {
+    bottom: 17.5em;
+}
+#wyoming {
+    color: var(--white);
+    bottom: 17.5em;
+}
+#my-info {
+    display: none;
+    visibility: hidden;
+}
+#contact {
+    margin-top: 0em;
+    padding: .5em .5em;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+label[for=my-name], label[for=my-email] {
+    font-size: 1em;
+    margin-right: 16em;
+    text-transform: uppercase;
+}
+label[for=my-message] {
+    font-size: 1em;
+    margin-right: 14em;
+    text-transform: uppercase;
+}
+#my-name, #my-email, #my-message {
+    font-size: 1em;
+    display: grid;
+    margin: 0px 80px 20px 80px;
+    padding: 5px;
+    width: 300px;
+    align-items: center;
+    border-radius: .1em;
+}
+::placeholder {
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#my-submit {
+    color: var(--white);
+    text-transform: uppercase;
+    background-color: var(--green);
+    width: 200px;
+    border-radius: 2em;
+    padding: 5px;
+    font-weight: bold;
+}
+#my-submit:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+small {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+footer {
+    background-color: var(--black);
+    margin-top: 0em;
+    padding: 3em;
+    color: var(--white);
+    text-transform: uppercase;
+}
+figcaption {
+    text-align: center;
+    justify-self: center;
+}
+figure {
+    text-align: center;
+}
+.photo-image{
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+@media screen and (min-width:880px) {
+    body {
+        width: 880px;
+        margin-bottom: 0;
+    }
+    .photo-image{
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    label[for=my-name], label[for=my-email] {
+        font-size: 1em;
+        margin-right: 16em;
+        text-transform: uppercase;
+    }
+    label[for=my-message] {
+        font-size: 1em;
+        margin-right: 14em;
+        text-transform: uppercase;
+    }
+    #gallery {
+        display: grid;
+        position: relative;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-column-gap: 0%;
+        justify-content: left;
+        margin-left: -23px;
+        margin-top: 75px;
+        padding-top: 75px;
+    }
+    #gallery > h2 {
+        display: flex;
+        position: absolute;
+        top: -2em;
+        left: 11.1em;
+        padding: 5px;
+    }
+    #gallery > p {
+        display: flex;
+        position: absolute;
+        top: -1em;
+        padding: 30px 0px 0px 1.2em;
+    }
+    #chile {
+        top: -13%;
+        left: 5%;
+    }
+    #guatemala {
+        top: -88%;
+        right: -8%;
+    }
+    #hawaii {
+        top: -5%;
+        left: 5%;
+    }
+    #iran {
+        top: -93%;
+        right: -5%;
+    }
+    #ireland {
+        top: -93%;
+        right: -5%;
+    }
+    #italy {
+        top: -6%;
+        right: -3%;
+    }
+    #moab-desert {
+        top: -12%;
+        left: 10%;
+    }
+    #rocky-mountains {
+        top: -90%;
+        left: 7%;
+    }
+    #switzerland {
+        top: -90%;
+        left: 10%;
+    }
+    #uk {
+        top: -88%;
+        right: -6%;
+    }
+    #usa {
+        top: -88%;
+        right: -6%;
+    }
+    #wyoming {
+        top: -88%;
+        right: -6%;
+    }
+    #contact {
+        position: relative;
+    }
+    #my-name, #my-email, #my-message {
+        align-items: center;
+        position: relative;
+        width: 600px;
+        margin-left: 14%;
+    }
+    #my-submit {
+        width: 300px;
+    }
+    label[for=my-name], label[for=my-email], label[for=my-message] {
+        position: relative;
+        margin-left: -37%;
+    }
+    footer {
+        padding: 1em 15em;
+        text-align: center;
+    }
+}
+@media screen and (min-width:1300px) {
+    body {
+        width: 1300px;
+    }
+    .photo-image{
+        position: relative;
+    }
+    ul {
+        padding: 3em 14em;
+        margin-right: -14em;
+        padding-left: 49em;
+    }
+    label[for=my-name], label[for=my-email] {
+        font-size: 1em;
+        margin-right: 8em;
+        text-transform: uppercase;
+    }
+    label[for=my-message] {
+        font-size: 1em;
+        margin-right: 6em;
+        text-transform: uppercase;
+    }
+    #gallery > h2 {
+        left: 17.9em;
+    }
+    #gallery {
+        grid-template-columns: 30% 30% 30%;
+        gap: 1.75em;
+    }
+    #hawaii {
+        top: -13%;
+        left: 5%
+    }
+    #my-name, #my-email, #my-message {
+        align-items: center;
+        width: 800px;
+        margin-left: 19em;
+    }
+    label[for=my-name], label[for=my-email], label[for=my-message] {
+        margin-left: -500px;
+    }
+    #my-submit {
+        width: 500px;
+    }
+}
